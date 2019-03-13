@@ -5,13 +5,13 @@
     <div class="text-right">
       <h3 class="text-white" data-test="address_balance"><%= balance(@address) %></h3>
       <%= unless match?({:pending, _}, @coin_balance_status) do %>
-        <span class="text-white text-faded">
+        <span class="text-white text-faded coinmarket-value">
           <span class="current-balance-in-wei"
             data-wei-value="<%= if @address.fetched_coin_balance, do: @address.fetched_coin_balance.value %>"
             <% if !empty_exchange_rate?(@exchange_rate) do %>
               data-usd-exchange-rate="<%= @exchange_rate.usd_value %>">
             <% end %>
-          </spanc>
+          </span>
           <% if !empty_exchange_rate?(@exchange_rate) do %>
           <small>(@ <span data-usd-unit-price="<%= @exchange_rate.usd_value %>"></span>/<%= gettext("Ether") %>)</small>
           <% end %>
