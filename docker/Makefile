@@ -85,9 +85,9 @@ else
 	@$(MAKE) -f $(THIS_FILE) migrate
 endif
 
-start: build postgres 
+start: build postgres
 	@echo "==> Starting blockscout"
-	@docker run --rm \
+	@docker run -d --rm \
 					$(BLOCKSCOUT_CONTAINNER_PARAMS) \
 					-p 4000:4000 \
 					$(DOCKER_IMAGE) /bin/sh -c "mix phx.server"
