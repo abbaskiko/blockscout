@@ -26,7 +26,7 @@
 
     <div class="row footer-info">
       <div class="col-12">
-        <%= gettext("Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.") %>
+        <%= gettext("Blockscout is a tool for inspecting and analyzing EVM based blockchains.") %>
       </div>
     </div>
 
