@@ -1,6 +1,6 @@
 COIN=CLC \
-NETWORK=Gaia \
-SUBNETWORK=Testnet \
+NETWORK=Testnet \
+SUBNETWORK=Gaia \
 ETHEREUM_JSONRPC_VARIANT=parity \
 ETHEREUM_JSONRPC_HTTP_URL=https://gaia.terrachain.network \
 ETHEREUM_JSONRPC_WS_URL=ws://gaia.terrachain.network/ws/ \
