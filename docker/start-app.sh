@@ -2,9 +2,9 @@ COIN=CLC \
 NETWORK=Testnet \
 SUBNETWORK=Gaia \
 ETHEREUM_JSONRPC_VARIANT=parity \
-ETHEREUM_JSONRPC_HTTP_URL=https://gaia.terrachain.network \
-ETHEREUM_JSONRPC_WS_URL=ws://gaia.terrachain.network/ws/ \
-ETHEREUM_JSONRPC_TRACE_URL=https://gaia.terrachain.network \
+ETHEREUM_JSONRPC_HTTP_URL=http://localhost:8545 \
+ETHEREUM_JSONRPC_WS_URL=http://localhost:8546 \
+ETHEREUM_JSONRPC_TRACE_URL=http://localhost:8545 \
 LOGO=/images/contractland-logo.svg \
 LINK_TO_OTHER_EXPLORERS=false \
 make start
