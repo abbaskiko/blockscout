@@ -80,6 +80,7 @@ else
 					-e POSTGRES_PASSWORD="" \
 					-e POSTGRES_USER="postgres" \
 					-p 5432:5432 \
+					--restart always \
 					$(PG_CONTAINER_IMAGE)
 	@sleep 1
 	@$(MAKE) -f $(THIS_FILE) migrate
@@ -87,9 +88,10 @@ endif
 
 start: build postgres
 	@echo "==> Starting blockscout"
-	@docker run -d --rm \
+	@docker run -d \
 					$(BLOCKSCOUT_CONTAINNER_PARAMS) \
 					-p 4000:4000 \
+					--restart always \
 					$(DOCKER_IMAGE) /bin/sh -c "mix phx.server"
 
 run: start
