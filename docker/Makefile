@@ -81,6 +81,9 @@ else
 					-e POSTGRES_USER="postgres" \
 					-p 5432:5432 \
 					--restart always \
+					--log-driver json-file \
+			    --log-opt max-size=10m \
+			    --log-opt max-file=1 \
 					$(PG_CONTAINER_IMAGE)
 	@sleep 1
 	@$(MAKE) -f $(THIS_FILE) migrate
@@ -92,6 +95,9 @@ start: build postgres
 					$(BLOCKSCOUT_CONTAINNER_PARAMS) \
 					-p 4000:4000 \
 					--restart always \
+					--log-driver json-file \
+			    --log-opt max-size=10m \
+			    --log-opt max-file=1 \
 					$(DOCKER_IMAGE) /bin/sh -c "mix phx.server"
 
 run: start
