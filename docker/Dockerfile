@@ -1,4 +1,4 @@
-FROM bitwalker/alpine-elixir-phoenix
+FROM bitwalker/alpine-elixir-phoenix:1.7.1
 
 RUN apk --no-cache --update add automake libtool inotify-tools autoconf python
 
